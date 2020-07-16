@@ -1,8 +1,12 @@
 package com.planetpope.micro1;
 
+import static org.junit.Assert.*;
+
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.Assert;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -15,9 +19,7 @@ public class Micro1ApplicationTests {
 
 	@Test 
 	public void testHomeController() {
-			HomeController homeController = new HomeController();
-			String result = homeController.home();
-			assertEquals(result, "Hello World!");
+		fail("not yet implemented");
 	}
 
 }
