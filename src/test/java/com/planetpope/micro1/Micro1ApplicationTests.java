@@ -13,11 +13,4 @@ public class Micro1ApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void testHomeController() {
-			HomeController homeController = new HomeController();
-			String result = homeController.home();
-			assertEquals(result, "Hello World!");
-	}
-
 }
