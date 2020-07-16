@@ -4,6 +4,7 @@ plugins {
 
 apply plugin: 'java'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'checkstyle'
 
 group = 'com.planetpope'
 version = '0.0.1-SNAPSHOT'
@@ -11,6 +12,26 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+}
+
+checkstyle {
+	// assign the latest checkstyle version explicitly
+	// default version is very old, likes 5.9
+	toolVersion = '8.6'
+	// checkstyle.xml copy from:
+	// https://raw.githubusercontent.com/checkstyle/checkstyle/checkstyle-8.6/src/main/resources/google_checks.xml
+	// the version should be as same as plugin version
+	configFile = rootProject.file('config/checkstyle/checkstyle.xml')
+}
+task Checkstyle(type: Checkstyle) {
+	source 'src/main/java'
+	include '**/*.java'
+	exclude '**/gen/**'
+	exclude '**/R.java'
+	exclude '**/BuildConfig.java'
+
+	// empty classpath
+	classpath = rootProject.files()
 }
 
 test {
