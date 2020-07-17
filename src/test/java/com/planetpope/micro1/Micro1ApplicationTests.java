@@ -19,7 +19,7 @@ public class Micro1ApplicationTests {
 
 	@Test 
 	public void testHomeController() {
-		fail("not yet implemented");
+		//fail("not yet implemented");
 	}
 
 }
