@@ -21,7 +21,7 @@ pipeline {
         branch 'PR-*'
       }
       steps {
-        echo 'this only runs for the PRs'
+        echo 'this only runs for the PR'
       }
     }
   }
