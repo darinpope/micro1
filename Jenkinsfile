@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Hello"){
             steps {
-                echo "Hello from Jenkins (micro1)"
+                echo "Hello from Jenkins (micro1, fix-123)"
             }
         }
     }
